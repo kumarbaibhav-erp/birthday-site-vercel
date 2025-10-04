@@ -27,11 +27,9 @@ export default function Messages() {
             {expanded ? "Read less" : "Please read more"}
           </button>
           <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              alert("Pretend this sends a big kiss 💋");
-            }}
+            href="https://wa.me/918102030413?text=Hey%20love%20%F0%9F%98%98"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1 border rounded-lg text-sm"
           >
             Send a kiss
