@@ -103,7 +103,7 @@ export default function App() {
                 className="bg-white rounded-2xl p-5 shadow"
               >
                 <h2 className="text-xl font-semibold text-pink-700">
-                  A few reasons to remain togerher forever
+                  A few reasons to remain together forever
                 </h2>
                 <Gallery2 />
               </motion.div>
