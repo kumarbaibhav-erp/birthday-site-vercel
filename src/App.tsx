@@ -8,6 +8,7 @@ import Messages from "./components/Messages";
 import Countdown from "./components/Countdown";
 import Reasons from "./components/Reasons";
 import OverlayCelebration from "./components/OverlayCelebration";
+import Gallery2 from "./components/Gallery2";
 
 const BIRTHDAY_ISO = dayjs().add(1, "day").startOf("day").toISOString(); // placeholder: tomorrow midnight
 
@@ -95,6 +96,18 @@ export default function App() {
                 <Reasons />
               </div>
             </section>
+
+            <section className="my-6">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="bg-white rounded-2xl p-5 shadow"
+              >
+                <h2 className="text-xl font-semibold text-pink-700">
+                  A few reasons to remain togerher forever
+                </h2>
+                <Gallery2 />
+              </motion.div>
+              </section>
 
             <footer className="text-center mt-8 text-xs text-gray-500">
               Made with ❤️ by Pucchu.

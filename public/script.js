@@ -7,7 +7,7 @@ import * as path from 'path';
 // --- CONFIGURATION ---
 // IMPORTANT: Place this script *outside* the 'photos' folder,
 // and make sure the 'photos' folder exists in the same directory as this script.
-const PHOTO_DIR = './photos';
+const PHOTO_DIR = './usPhotos';
 const BASE_NAME = 'photo'; // The prefix for the new file names (e.g., 'photo' -> photo1.jpeg)
 
 // List of file extensions the script should target
