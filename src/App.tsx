@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 import { motion } from "framer-motion";
 import Gallery from "./components/Gallery";
 import Memories from "./components/Memories";
@@ -10,7 +12,10 @@ import Reasons from "./components/Reasons";
 import OverlayCelebration from "./components/OverlayCelebration";
 import Gallery2 from "./components/Gallery2";
 
-const BIRTHDAY_ISO = dayjs().add(1, "day").startOf("day").toISOString(); // placeholder: tomorrow midnight
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+const BIRTHDAY_ISO = dayjs.tz("2026-10-05T00:00:00", "Asia/Kolkata").toISOString();
 
 export default function App() {
   const [isMidnight, setIsMidnight] = useState(false);
@@ -47,7 +52,7 @@ export default function App() {
             </motion.h1>
 
             <p className="mt-3 text-sm sm:text-base text-pink-600/80">
-              I made this little corner on the web just for you. Opened at
+              I made this little corner on the web just for you. Open at
               midnight — every second carries a wish.
             </p>
             <Countdown targetIso={BIRTHDAY_ISO} />
